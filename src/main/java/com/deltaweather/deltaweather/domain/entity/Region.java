@@ -1,4 +1,4 @@
-package com.deltaweather.deltaweather.domain;
+package com.deltaweather.deltaweather.domain.entity;
 
 import javax.persistence.Embeddable;
 
