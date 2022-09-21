@@ -17,8 +17,8 @@ public class MemberLoc {
     @Embedded
     private Region region;
 
-//    @ManyToOne(fetch = LAZY)
-//    private Member member;
+    @ManyToOne(fetch = LAZY)
+    private Member member;
 
     @ManyToOne(fetch = LAZY)
     private Location location;
