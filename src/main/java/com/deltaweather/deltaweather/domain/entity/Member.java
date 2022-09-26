@@ -10,13 +10,14 @@ import java.util.List;
 
 @Entity
 @Data @Builder
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+//@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 @AllArgsConstructor
+@Getter @Setter
 public class Member {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "member_id")
-    @NotEmpty
     private Long id;
 
     @NotEmpty
@@ -30,6 +31,9 @@ public class Member {
     @NotEmpty
     @Column(name = "password")
     private String memberPassword;
+
+    @Enumerated(EnumType.STRING)
+    private Role role;
 
     @OneToMany(mappedBy = "location")
     private List<MemberLoc> memberLocs = new ArrayList<>();
